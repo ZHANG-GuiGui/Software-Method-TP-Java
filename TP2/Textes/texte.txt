@@ -1,0 +1,3 @@
+Bonjour,
+Il fait beau aujourd'hui. Il fait chaud.
+Je suis beau.
