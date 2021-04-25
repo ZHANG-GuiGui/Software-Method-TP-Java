@@ -49,5 +49,13 @@ public class Sc{
 		System.out.println("Le dérivée d'équation en x="+x+" est : "+arbre.calculNum(x));
 		Arbre arbreDerive = ManipulationArbre.XMLVersArbre("Derive.xml");
 		ManipulationArbre.Affiche(arbreDerive);
+		arbreDerive.simplifiDerive(x);
+		System.out.println("Le dérivée d'équation simplifiée est : "+arbreDerive.arbreVersTexte());
+
+		//Une autre facon de faire la derivee
+		Arbre arbreDeriver = arbreSimp.deriver();
+		ManipulationArbre.Affiche(arbreDeriver);
+		System.out.println("La dérivée de l'équation est : "+arbreDeriver.arbreVersTexte());
+		System.out.println("Le dérivée d'équation en x="+x+" est : "+arbreDeriver.calculNum(x));
     }
-  }
+}
