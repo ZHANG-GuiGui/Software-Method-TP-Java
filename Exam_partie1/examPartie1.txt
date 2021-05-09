@@ -1,0 +1,139 @@
+Liste Chainée Ordonnée
+Le nom du dossier sera impérativement: NumeroEtudiantMaster_NomChinoisPinyin_NonFrançais_ExamenMELOG_Partie1
+(voir en fin de ce fichier ce qu'il faut rendre)
+
+Il s'agit de définir une classe modélisant une liste d'entiers ordonnés par ordre croissant. 
+La liste sera représentée par une liste chaînée.
+
+La liste chaînée sera construite en utilisant la classe Chainon définie partiellement dans le fichier Chainon.java fourni. 
+On ajoutera un constructeur dans cette classe.
+Une classe nommée ListeChaineeOrdonnee modélisera la liste ordonnée ; pour la définir, il faut compléter le fichier ListeChaineeOrdonnee.java fourni. 
+
+Vous pouvez aussi trouver le fichier ExceptionListeVide.java qui vous sera utile ; l'exception y est définie (ne servira que dans la dernière question).
+
+Pour tester votre travail, vous utiliserez la classe Main définie dans le fichier Main.java.
+Le résultat de l'exécution de ce programme de Main devra être :
+
+Contenu de la liste : 8 19 19 21 35 
+Nombre de chainons (taille de la liste ): 5
+Liste dans l'ordre decroissant : 35 21 19 19 8 
+On retire le plus petit : 8
+Valeur du plus grand : 35
+8 existe : false
+19 existe : true
+21 existe : true
+18 existe : false
+Contenu de la liste : , 19, 19, 21, 35
+On retire le plus petit : 19
+On retire le plus petit : 19
+On retire le plus petit : 21
+On retire le plus petit : 35
+Valeur du plus grand : Exception in thread "main" La liste est vide
+	at ListeChaineeOrdonnee.plusGrand(ListeChaineeOrdonnee.java:74)
+	at Main.main(Main.java:55)
+
+---
+Première question [Q1] (très facile <5 mn) : compléter la classe Chainon en programmant un constructeur 
+et en complétant à chaque fois qu'il y a  ". . ." dans les méthodes qui sont données
+>>> A la fin de cette question, le programme Main doit pouvoir être compilé et exécuté 
+(avec des valeurs qui ne seront pas encore bien traitées : Nombre de chainons (taille de la liste ): 0    etc.  ).
+
+---
+Deuxième question : [Q2] commencer à compléter la classe ListeChaineeOrdonnee en complétant la méthode ajouter (seul le début de cette méthode est donné).
+Vous pouvez exécuter le Main pour vérifier.
+>>> cette méthode est un peu difficile mais nécessaire pour la suite. Si vous ne réussissez pas à programmer cette méthode, vous pouvez prendre dans le dossier "SiPasReussiQ2" le nouveau ficher ListeChaineeOrdonnee.java et le fichier LCOP.class <<<<
+
+>>> A partir de ce moment là, les questions suivantes sont indépendantes <<<<
+
+---
+Troisième question : [Q3] compléter la classe ListeChaineeOrdonnee en complétant la méthode ecrire (qui donne le contenu de la liste ordonnée).
+Vous pouvez exécuter le Main pour vérifier que le contenu de la liste est exact.
+
+---
+Quatrième question (facile) : [Q4] compléter la classe ListeChaineeOrdonnee en complétant la méthode taille (qui donne le nombre d'éléments dans la liste).
+
+---
+Cinquième question (un peu plus difficile) : [Q5] compléter la classe ListeChaineeOrdonnee en complétant la méthode ecrireDecroissant(Chainon deb) (qui donne le contenu de la liste à l'envers). Cette méthode doit être récursive. Elle est appelée par la méthode ecrireDecroissant() qui n'a pas de paramètre (qui est donnée dans la classe ListeChaineeOrdonnee).
+
+---
+Sixième question : [Q6] compléter la classe ListeChaineeOrdonnee en complétant la méthode retirePlusPetit (qui supprime le plus petit éléments de la liste).
+
+---
+Septième question : [Q7] compléter la classe ListeChaineeOrdonnee en complétant la méthode plusGrand (qui indique la valeur du plus grand élément de la liste).
+
+---
+Huitième question : [Q8] compléter la classe ListeChaineeOrdonnee en complétant la méthode existe (qui retourne VRAI si la liste contient la valeur passée en paramètre).
+
+---
+Neuvième question : [Q9] compléter la méthode toString() pour une ListeChaineeOrdonnee.
+
+---
+Dixième question : [Q10] compléter la méthode retirerPlusPetit() pour qu'une exception soit déclenchée si la liste est vide.
+
+--- --- 
+Pour répondre: 
+Envoyer les 4 fichiers suivants dans un message mail unique (sans .zip ni .rar, ni dossier (folder)) au plus tard 45 mn après réception du présent message:
+	* ListeChaineeOrdonnee.java 
+	* Chainon.java
+	* Main.java
+	* examPartie1.txt complété comme ci-dessous (MEME SI LES FONCTIONS SONT DANS LE FICHIER xxx.java, IL FAUT ABSOLUMENT REMPLACER LES ... CI_DESSOUS): 
+--- ---
+
+
+
+
+[Q2]: 
+    public void ajouter(int n) {
+	. . . 
+  POUR LA SUITE : j'ai continué avec ma méthode ajouter OU j'ai continué avec les 2 fichiers qui étaient dans "SiPasReussiQ2
+  >> IL FAUT REPONDRE A CETTE QUESTION: effacer une des deux phrases ci dessus <<<   
+--- ---
+[Q3]: 
+    public void ecrire() {
+	. . . 
+    
+--- ---
+[Q4]: 
+    public  . . .  taille() {
+	. . . 
+    
+--- ---
+[Q5]: 
+    public void ecrireDecroissant() {
+	. . . 
+    
+--- ---
+[Q6]: 
+    public void retirePlusPetit() {
+	. . . 
+    
+--- ---
+[Q7]: 
+    public . . . plusGrand() {
+	. . . 
+    
+--- ---
+[Q8]: 
+    public . . .  existe( . . . ) {
+	. . . 
+    
+--- ---
+[Q9]: 
+    public void toString() {
+	. . . 
+    
+--- ---
+[Q10]: 
+    public void retirePlusPetit() {
+	. . . 
+    
+--- --- --- --- --- ---
+RAPPEL:    A RENDRE EN FIN DE LA PARIE 1 de l'EXAMEN:
+Le nom du dossier (folder) sera impérativement: NumeroEtudiantMaster_NomChinoisPinyin_NonFrançais_ExamenMELOG_Partie1
+Le dossier ne sera pas compressé (pas de .rar ni .zip) et contiendra les fichiers suivants COMPLETES PAR VOUS
+. Main.java
+. Chainon.java
+. examPartie1.txt
+. ListeChaineeOrdonnee.java
+. LCOP.class (SEULEMENT SI VOUS AVEZ UTILISE CE FICHIER)
+--- --- --- --- --- ---

@@ -1,0 +1,102 @@
+                       
+Arbre binaire de recherche
+Le nom du dossier sera impérativement: NumeroEtudiantMaster_NomChinoisPinyin_NonFrançais_ExamenMELOG_Partie2
+(voir en fin de ce fichier ce qu'il faut rendre)
+
+L'objet de cet exercice est de modéliser un arbre binaire de recherche et d'utiliser un tel arbre pour effectuer un tri.
+L'arbre binaire contiendra des mots, objets de la classe String.
+
+On écrira d'abord une classe Noeud modélisant un noeud de l'arbre et qui contiendra :
+
+ - un attribut privé de la classe String nommé mot pour le mot contenu par le noeud ;
+ - un attribut privé de type int nommé nbOcc qui servira à compter un nombre d'occurrences du mot contenu par le noeud dans un texte donné ;
+ - deux attributs privé nommés fg et fd, de type Noeud, pour les sous-arbres gauche et droit issus de ce noeud ;
+ - un constructeur prenant en paramètre une chaîne de caractères pour initialiser l'attribut mot.
+la classe contiendra aussi des accesseurs pour ces attributs privés.
+
+On écrira une classe ArBinRech pour représenter un arbre binaire de recherche et qui aura :
+
+ - un attribut privé de type Noeud nommé racine pour la racine de l'arbre ;
+ - un constructeur pour construire un arbre vide, pour lequel racine vaut null;
+ - un constructeur pour construire un arbre en utilisant un fichier de mots dont le nom sera fourni en paramètre, et qui fera appel à la méthode construire décrite ci-dessous ;
+ 
+ - une méthode construire qui est donnée : cette méthode prend en paramètre un nom de fichier et ajoute à l'arbre binaire de recherche tous les mots contenus dans le fichier en appelant la méthode inserer décrite ci-dessous (cette méthode ressemble (en plus simple) à ce que vous avez utilisé au TP2).
+ 
+ - une méthode privée inserer ayant deux paramètres, un de type String nommé mot pour le mot à insérer et un de type Noeud nommé rac pour la racine de l'arbre ou du sous-arbre dans lequel le mot doit être inséré : cette méthode est récursive ; il y a deux cas selon que l'arbre dans lequel le mot doit être inséré est vide ou non ; dans ce second cas, soit l'insertion à lieu dans le sous-arbre gauche, soit l'insertion a lieu dans le sous-arbre droit, soit le nombre d'occurrences est augmenté ;
+ 
+une méthode inserer ayant un seul paramètre de type String nommé mot pour le mot à insérer ; elle insère mot dans l'arbre modélisé ;
+ 
+ - une méthode hauteur qui calcule la hauteur de l'arbre en appelant une méthode privée récursive de même nom.
+ - une méthode nbNoeuds qui calcule le nombre de noeuds de l'arbre en appelant une méthode privée récursive de même nom.
+
+ - une méthode ecrireInfixe sans paramètre : elle permet d'écrire la liste des mots contenus dans l'arbre et triée en ordre alphabétique, en indiquant aussi le nombre d'occurrences de chacun de ces mots ; elle appelle une autre méthode ecrireInfixe, récursive, ayant un paramètre de type Noeud.
+ 
+La classe Main permet de tester la classe ArBinRech avec une méthode main. On teste en insérant d'abord des mots un à un, puis en construisant l'arbre à partir du fichier fourni (debutDesMiserables.txt). 
+
+---
+Première question (très facile <5 mn): compléter la classe Noeud pour qu'elle soit utilisable par ArBinRech.
+>>> A la fin de cette question, le programme Main doit pouvoir être compilé et exécuté 
+(avec des valeurs qui ne seront pas encore bien traitées : La hauteur de l'arbre est : 0
+Le nombre de noeuds de l'arbre est : 0  etc.  ).
+
+---
+Deuxième question (pas trop difficile <15mn): [Q2] compléter la classe ArBinRech pour que la classe Main fonctionne en construisant l'arbre binaire de recherche grâce à la méthode inserer.
+>>> Cette question est nécessaire pour la suite. A partir de la question suivante, les questions sont indépendantes.
+
+---
+Troisième question (pas trop difficile <10mn): [Q3] compléter la classe ArBinRech pour que la classe Main fonctionne et donne la hauteur de l'arbre binaire de recherche qui a été créé.
+
+---
+Quatrième question (pas trop difficile <10mn): [Q4] compléter la classe ArBinRech pour que la classe Main fonctionne et donne le nombre de noeuds dans l'arbre binaire de recherche qui a été créé.
+
+---
+Cinquième question (très facile <5mn): [Q5] compléter la classe ArBinRech pour que Main fonctionne en donnant le résultat correct de la méthode  ecrireInfixe. 
+
+---
+Sixième question (un peu plus difficile): [Q6] compléter la méthode estUnABR dans la classe ArBinRech pour que Main vérifie si l'arbre créé est bien un arbre binaire de recherche. 
+
+---
+Septième question (encore un peu difficile, mais pas trop): [Q7] ajouter une méthode leMotPlusFrequent qui renvoie le mot qui apparaît le plus grand nombre de fois. 
+
+--- --- 
+Pour répondre: 
+Envoyer les 4 fichiers suivants dans un message mail unique (sans .zip ni .rar, ni dossier (folder)) au plus tard 45 mn après réception du présent message:
+	* ArBinRech.java 
+	* Noeud.java
+	* Main.java
+	* examPartie2.txt complété comme ci-dessous:
+--- ---
+[Q2]: 
+    public Noeud inserer(Noeud rac, String mot ) {
+	. . . 
+    
+[Q3]
+    private int hauteur(Noeud rac) {
+	. . .
+
+[Q4]
+    private int nbNoeuds(Noeud rac) {
+	. . .
+
+[Q5]    
+    private void ecrireInfixe(Noeud rac) {
+	. . .
+
+[Q6]
+   public boolean estUnABR(){
+    	. . .
+   
+[Q7] 			
+   public  . . .  leMotPlusFrequent(){
+     	. . .
+
+--- ---
+--- --- --- --- --- ---
+RAPPEL:    A RENDRE EN FIN DE LA PARIE 2 de l'EXAMEN:
+Le nom du dossier (folder) sera impérativement: NumeroEtudiantMaster_NomChinoisPinyin_NonFrançais_ExamenMELOG_Partie2
+Le dossier ne sera pas compressé (pas de .rar ni .zip) et contiendra les fichiers suivants COMPLETES PAR VOUS
+. Main.java
+. Noeud.java
+. examPartie2.txt
+. ArBinRech.java
+--- --- --- --- --- ---
